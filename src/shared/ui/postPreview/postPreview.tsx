@@ -3,7 +3,7 @@ import { PostProps } from "../../../entities/post/model/post"
 import Button from "../button/button"
 import { useNavigate } from "react-router-dom"
 
-const Post: FC<PostProps> = ({ post }) => {
+const PostPreview: FC<PostProps> = ({ post }) => {
   const navigate = useNavigate()
   return (
     <section
@@ -32,4 +32,4 @@ const Post: FC<PostProps> = ({ post }) => {
   )
 }
 
-export default Post
+export default PostPreview

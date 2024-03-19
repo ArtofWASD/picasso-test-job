@@ -18,7 +18,7 @@ const PostPage = () => {
             <span>
               <Button
                 onClick={() => {
-                  nav("/")
+                  nav(-1)
                 }}>
                 "Назад"
               </Button>

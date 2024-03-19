@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useGetPostsQuery } from "../../shared/api/getPosts"
 import { IPost } from "../../entities/post/model/post"
-import Post from "../../shared/ui/post/post"
+import PostPreview from "../../shared/ui/postPreview/postPreview"
 
 const HomePage = () => {
   const [page, setPage] = useState(0)
@@ -25,8 +25,8 @@ const HomePage = () => {
   return (
     <>
       <div id="posts" className="posts grid gap-4 my-4  justify-items-start justify-center">
-        {posts.map((post: IPost) => (
-          <Post post={post} key={post.id} />
+        {posts.map((post: IPost, index:number) => (
+          <PostPreview post={post} key={index} />
         ))}
       </div>
     </>
