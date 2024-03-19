@@ -16,17 +16,17 @@ const HomePage = () => {
       }
     };
     document.addEventListener("scroll", onScroll);
-    return function () {
+    return () => {
       document.removeEventListener("scroll", onScroll);
     };
   }, [page, isFetching]);
 
   return (
     <>
-      <div>
+      <div className="flex flex-col gap-4 justify-center">
         {posts.map((post: Post) => (
-          <div key={post.id} className="rounded border-black border-2">
-            <p>{post.title}</p>
+          <div key={post.id} className="rounded border-black border-2 text-3xl">
+            <p className="text-2xl">{post.title}</p>
             <p>{post.body}</p>
           </div>
         ))}
